@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #0A0B0E;
+    color: #F4F2EE;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  h1, h2, .font-display {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom subtle scrollbars for seat drawers and showtime strips */
+.cinema-scroll::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+.cinema-scroll::-webkit-scrollbar-track {
+  background: #12141A;
+}
+
+.cinema-scroll::-webkit-scrollbar-thumb {
+  background: #2C313D;
+  border-radius: 3px;
+}
+
+.cinema-scroll::-webkit-scrollbar-thumb:hover {
+  background: #E5A93B;
+}
